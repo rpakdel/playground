@@ -1,0 +1,26 @@
+extends layout
+
+block headContent
+  script(type="text/javascript", src="/javascripts/viewmodel.js")
+  script(type="text/javascript").      
+      $(document).ready(function() {
+        init();
+      });
+
+block content
+  h1= title
+  input(type='checkbox' checked=false data-bind='checked: option1' value='Option 1')
+  span Vote 1, Count:
+  span(data-bind='text: numVotes1') num1
+  br
+  input(type='checkbox' checked=false data-bind='checked: option2' value='Option 2')
+  span Vote 2, Count:
+  span(data-bind='text: numVotes2') num2
+  br
+  button(data-bind='click: setVote') Vote
+  br
+  span Total Count:
+  span(data-bind='text: numTotalVotes')
+  br
+  ul(data-bind='foreach: votes')
+    li(data-bind='text: $data')
