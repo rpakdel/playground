@@ -26,10 +26,14 @@
 
 ## Router and Privoxy server configuration
 * Add this to privoxy server so port 80 is redirected to port 8118
-* iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8118
+```
+iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8118
+```
 
-# Add this script under to TomatoUSB > Administration > Scripts > Firewall
+* Add this script under to TomatoUSB > Administration > Scripts > Firewall
+```
 iptables -t mangle -A PREROUTING -p tcp --dport 80 -s 192.168.1.102 -j ACCEPT
 iptables -t mangle -A PREROUTING -p tcp --dport 80 -j MARK --set-mark 3
 ip rule add fwmark 3 table 2
 ip route add default via 192.168.1.102 dev br0 table 2
+```
