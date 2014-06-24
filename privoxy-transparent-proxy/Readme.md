@@ -1,4 +1,5 @@
-## Configure privoxy
+## Configure Privoxy
+```
 * listen-address :8118
 * accept-intercepted-requests 1
 * enable-remote-toggle 1
@@ -6,21 +7,30 @@
 * enable-edit-actions 1
 * debug 1            <- remove when done
 * debug 1024         <- remove when done
+```
 
 ## remove too aggressive actions
-* /etc/privoxy/match-all.action
+* `/etc/privoxy/match-all.action`
 * Edit and unset everything (too agressive)
 
 ## Privoxy Blocklist
-* Get privoxy-blocklist.sh and put somewhere /usr/local/privoxy-blocklist
+* Get privoxy-blocklist.sh and put somewhere e.g. `/usr/local/privoxy-blocklist`
 * Edit the shell file
-* SCRIPTCONF=/etc/privoxy-blacklist/config
+```
+SCRIPTCONF=/etc/privoxy-blacklist/config
+```
 * Run the script to make the config file
 * edit the config file and add the following easylist
-* http://adblockplus.mozdev.org/easylist/easylist.txt
-* /usr/local/privoxy-blocklist/privoxy-blocklist.sh
-* Setup a cron job to run at midnight *	0	*	*	*	/usr/local/privoxy-blocklist/privoxy-blocklist.sh
+```
+http://adblockplus.mozdev.org/easylist/easylist.txt
+```
+* Run `privoxy-blocklist.sh`
+* Setup a cron job to run at midnight 
+```
+* 0	*	*	*	/usr/local/privoxy-blocklist/privoxy-blocklist.sh
+```
 
+## Verify
 * Setup proxy in Firefox/Chrome to privoxy manually 
 * If all works, use below to setup transparent proxy
 
