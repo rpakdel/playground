@@ -11,7 +11,7 @@ debug 1024         <- remove when done
 
 ## remove too aggressive actions
 * `/etc/privoxy/match-all.action`
-* Edit and unset everything
+* Edit and unset everything or [set to mininmum](http://www.privoxy.org/user-manual/actions-file.html#AEN4891)
 
 ## Privoxy Blocklist
 * Get [privoxy-blocklist.sh](https://github.com/Andrwe/privoxy-blocklist) and put somewhere e.g. `/usr/local/privoxy-blocklist`
