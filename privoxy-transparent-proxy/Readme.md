@@ -14,7 +14,7 @@ debug 1024         <- remove when done
 * Edit and unset everything
 
 ## Privoxy Blocklist
-* Get privoxy-blocklist.sh and put somewhere e.g. `/usr/local/privoxy-blocklist`
+* Get (privoxy-blocklist.sh)[https://github.com/Andrwe/privoxy-blocklist] and put somewhere e.g. `/usr/local/privoxy-blocklist`
 * Edit the shell file
 ```
 SCRIPTCONF=/etc/privoxy-blacklist/config
