@@ -32,6 +32,7 @@ http://adblockplus.mozdev.org/easylist/easylist.txt
 
 ## Verify
 * Setup proxy in Firefox/Chrome to privoxy manually 
+* Go to [http://config.privoxy.org/](http://config.privoxy.org)
 * If all works, use below to setup transparent proxy
 
 ## Router and Privoxy server configuration
