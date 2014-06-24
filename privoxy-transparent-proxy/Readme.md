@@ -39,6 +39,7 @@ Add this to privoxy server so port 80 is redirected to port 8118
 ```
 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8118
 ```
+Put above line somewhere to be called when server boots (e.g. /etc/rc.local in Debian)
 
 Add this script under to TomatoUSB > Administration > Scripts > Firewall
 * ACCEPT anything going to privoxy IP (192.168.1.102)
