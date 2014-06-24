@@ -14,13 +14,13 @@ debug 1024         <- remove when done
 * Edit and unset everything
 
 ## Privoxy Blocklist
-* Get (privoxy-blocklist.sh)[https://github.com/Andrwe/privoxy-blocklist] and put somewhere e.g. `/usr/local/privoxy-blocklist`
+* Get [privoxy-blocklist.sh](https://github.com/Andrwe/privoxy-blocklist) and put somewhere e.g. `/usr/local/privoxy-blocklist`
 * Edit the shell file
 ```
 SCRIPTCONF=/etc/privoxy-blacklist/config
 ```
 * Run the script to make the config file
-* edit the config file and add the following easylist
+* edit the config file and add the following [easylist](https://easylist.adblockplus.org/en/)
 ```
 http://adblockplus.mozdev.org/easylist/easylist.txt
 ```
