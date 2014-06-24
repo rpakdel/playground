@@ -1,12 +1,12 @@
 ## Configure Privoxy
 ```
-* listen-address :8118
-* accept-intercepted-requests 1
-* enable-remote-toggle 1
-* enable-remote-http-toggle 1
-* enable-edit-actions 1
-* debug 1            <- remove when done
-* debug 1024         <- remove when done
+listen-address :8118
+accept-intercepted-requests 1
+enable-remote-toggle 1
+enable-remote-http-toggle 1
+enable-edit-actions 1
+debug 1            <- remove when done
+debug 1024         <- remove when done
 ```
 
 ## remove too aggressive actions
@@ -41,9 +41,19 @@ iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 81
 ```
 
 * Add this script under to TomatoUSB > Administration > Scripts > Firewall
+* ACCEPT anything going to privoxy IP (192.168.1.102)
 ```
 iptables -t mangle -A PREROUTING -p tcp --dport 80 -s 192.168.1.102 -j ACCEPT
+```
+* MARK everything else with 3
+```
 iptables -t mangle -A PREROUTING -p tcp --dport 80 -j MARK --set-mark 3
+```
+* Create fwmark 3 in table 2
+```
 ip rule add fwmark 3 table 2
+```
+* Add route via table 2
+```
 ip route add default via 192.168.1.102 dev br0 table 2
 ```
