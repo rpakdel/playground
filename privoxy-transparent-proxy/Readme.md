@@ -11,7 +11,7 @@ debug 1024         <- remove when done
 
 ## remove too aggressive actions
 * `/etc/privoxy/match-all.action`
-* Edit and unset everything (too agressive)
+* Edit and unset everything
 
 ## Privoxy Blocklist
 * Get privoxy-blocklist.sh and put somewhere e.g. `/usr/local/privoxy-blocklist`
@@ -35,12 +35,12 @@ http://adblockplus.mozdev.org/easylist/easylist.txt
 * If all works, use below to setup transparent proxy
 
 ## Router and Privoxy server configuration
-* Add this to privoxy server so port 80 is redirected to port 8118
+Add this to privoxy server so port 80 is redirected to port 8118
 ```
 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8118
 ```
 
-* Add this script under to TomatoUSB > Administration > Scripts > Firewall
+Add this script under to TomatoUSB > Administration > Scripts > Firewall
 * ACCEPT anything going to privoxy IP (192.168.1.102)
 ```
 iptables -t mangle -A PREROUTING -p tcp --dport 80 -s 192.168.1.102 -j ACCEPT
