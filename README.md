@@ -1,5 +1,3 @@
-﻿# knockout1
-
-These are collection of projects I've made while trying things out to learn.
+﻿My playground for temporary/small projects intended mostly for my own learning.
 
 

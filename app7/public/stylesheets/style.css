@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#main {
+  background: lightpink;
+}
+
+#menu {
+  background:lightblue;
+}
+
+a {
+  color: #00B7FF;
+}

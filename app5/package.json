@@ -1,0 +1,17 @@
+{
+  "name": "app5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Reza Pakdel <rpakdel@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.16.0",
+    "eslint": "^3.8.0",
+    "eslint-config-google": "^0.6.0",
+    "webpack-init": "^0.1.2"
+  }
+}

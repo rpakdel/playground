@@ -1,0 +1,14 @@
+{
+  "name": "app10-this-bind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Reza Pakdel <rpakdel@gmail.com> (https://github.com/rpakdel)",
+  "license": "ISC",
+  "dependencies": {
+    "say": "^0.11.0"
+  }
+}
